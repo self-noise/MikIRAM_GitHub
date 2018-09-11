@@ -19,12 +19,13 @@ The current version (1a) requires the 'playrec' utility to run. This is an exter
 ### Tech summary
 The utility uses the exponential sine sweep method (ESS) to obtain the impulse response of, for example, a room or music hall. It requires the use of an external sound card, typically over USB (e.g. RME Fireface, Focusrite 2i2), relevant microphones, and a powered loudspeaker.
 
-A series of 3 short introductory videos that explain how to install and use MikRIR:
+### How to use MikIRAM
+A series of 3 short introductory videos that explain how to install and use MikIRAM (from back when it was called MikRIR...):
 
 1. https://youtu.be/efN6BOS6yfo 
 2. https://youtu.be/85igh2mUCAQ 
 3. https://youtu.be/plX04j1MJKU
 
-Happy RIRing!
+---
 
  
