@@ -11,15 +11,16 @@ function  [RIR_data_brief] = MikRIR_07_SaveData_Fn__V5(RIR_metadata,RIR_params,R
 %-------------------------------------------------------------------------%
 % Save data if required
 %-------------------------------------------------------------------------%
-RIR_data_brief.sigRawFadePad     = RIR_data.sigRawFadePad;
-RIR_data_brief.audioData_SyncPad = RIR_data.audioData_SyncPad;
-RIR_data_brief.FR                = RIR_data.FR;
-RIR_data_brief.IR                = RIR_data.IR;
-RIR_data_brief.IR_whole          = RIR_data.IR_whole;
-RIR_data_brief.invFilter_dft     = RIR_data.invFilter_dft;
-RIR_data_brief.A_compensation    = RIR_data.A_compensation;
+% RIR_data_brief.sigRawFadePad     = RIR_data.sigRawFadePad;
+% RIR_data_brief.audioData_SyncPad = RIR_data.audioData_SyncPad;
+% RIR_data_brief.FR                = RIR_data.FR;
+% RIR_data_brief.IR                = RIR_data.IR;
+% RIR_data_brief.IR_whole          = RIR_data.IR_whole;
+% RIR_data_brief.invFilter_dft     = RIR_data.invFilter_dft;
+% RIR_data_brief.A_compensation    = RIR_data.A_compensation;
 
-RIR_data = RIR_data_brief;
+%RIR_data = RIR_data_brief;
+
 %RIR_metadata.dataPath
 %savefig(RIR_metadata.plotFig,dataFilename,'compact')
 %saveas(RIR_metadata.plotFig,RIR_metadata.dataPath,'epsc')
