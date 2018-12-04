@@ -24,17 +24,25 @@ if RIR_data.IR_winRange(end) > raw_IR_length
     N_Zeros = RIR_data.IR_winRange(end)-raw_IR_length-1;
     
     RIR_data.IR = RIR_data.IR_whole(RIR_data.IR_winRange(1):end,:);    
+    RIR_data.IR_raw = RIR_data.IR_whole_raw(RIR_data.IR_winRange(1):end,:);    
     zeroMat     = zeros(N_Zeros,length(RIR_metadata.recChanList));    
     
     %size(RIR_data.IR)
     %size(zeroMat)
     RIR_data.IR = [RIR_data.IR;zeroMat];
+    RIR_data.IR_raw = [RIR_data.IR_raw;zeroMat];
 else
     % The usual case: Simply extract requested range with no error nor zero
     % padding required
     RIR_data.IR                 = RIR_data.IR_whole(RIR_data.IR_winRange,:);
+    RIR_data.IR_raw             = RIR_data.IR_whole_raw(RIR_data.IR_winRange,:);
 end
 
 % And make the 'linear' frequency response from the windowed RIR
 RIR_data.FR                 = fft(RIR_data.IR);
+RIR_data.FR_raw = fft(RIR_data.IR_raw);
+
+%peakVal = max(max(abs(RIR_data.IR)));
+%RIR_data.IR_norm = RIR_data.IR/peakVal;
+
 end

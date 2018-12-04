@@ -46,7 +46,10 @@ RIR_data.FR_whole           = RIR_data.audioData_dft.*RIR_data.invFilter_dft_Mat
 %RIR_data.IR = ifft(RIR_data.FR);
 RIR_data.IR_whole           = circshift(ifft(RIR_data.FR_whole),RIR_params.N_sigRawFadePad);
 
-% Normalise all measured signals so that loudest is at +/- 1
+% Make a copy of the raw (non-normalised) whole IR
+RIR_data.IR_whole_raw = RIR_data.IR_whole;
+
+% Normalise all measured signals (as a set) so that loudest is at +/- 1
 peakVal = max(max(abs(RIR_data.IR_whole)));
 RIR_data.IR_whole = RIR_data.IR_whole/peakVal;
 

@@ -11,15 +11,21 @@ function  [RIR_data_brief] = MikRIR_07_SaveData_Fn__V5(RIR_metadata,RIR_params,R
 %-------------------------------------------------------------------------%
 % Save data if required
 %-------------------------------------------------------------------------%
-% RIR_data_brief.sigRawFadePad     = RIR_data.sigRawFadePad;
-% RIR_data_brief.audioData_SyncPad = RIR_data.audioData_SyncPad;
-% RIR_data_brief.FR                = RIR_data.FR;
-% RIR_data_brief.IR                = RIR_data.IR;
-% RIR_data_brief.IR_whole          = RIR_data.IR_whole;
-% RIR_data_brief.invFilter_dft     = RIR_data.invFilter_dft;
-% RIR_data_brief.A_compensation    = RIR_data.A_compensation;
+RIR_data_brief.sigRaw            = RIR_data.sigRaw;
+RIR_data_brief.sigRawFadePad     = RIR_data.sigRawFadePad;
+%RIR_data_brief.sigRawFadePadClick= RIR_data.sigRawFadePadClick;
+RIR_data_brief.audioData         = RIR_data.audioData;
+RIR_data_brief.audioData_Sync    = RIR_data.audioData_Sync;
+%RIR_data_brief.audioData_SyncPad = RIR_data.audioData_SyncPad;
+RIR_data_brief.IR_whole_raw      = RIR_data.IR_whole_raw;
+RIR_data_brief.IR_raw            = RIR_data.IR_raw;
+RIR_data_brief.FR_raw            = RIR_data.FR_raw;
+RIR_data_brief.IR                = RIR_data.IR;
+RIR_data_brief.FR                = RIR_data.FR;
+RIR_data_brief.invFilter_dft     = RIR_data.invFilter_dft;
+RIR_data_brief.A_compensation    = RIR_data.A_compensation;
 
-%RIR_data = RIR_data_brief;
+RIR_data = RIR_data_brief;
 
 %RIR_metadata.dataPath
 %savefig(RIR_metadata.plotFig,dataFilename,'compact')
